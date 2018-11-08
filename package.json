@@ -1,0 +1,35 @@
+{
+  "name": "@mspg/stylus",
+  "version": "0.0.1",
+  "description": "stylus to css transform for mspg",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "t",
+    "format": "f -w"
+  },
+  "dependencies": {
+    "@magic/log": "github:magic/log",
+    "autoprefixer-stylus": "0.14.0",
+    "nib": "1.1.2",
+    "stylus": "0.54.5"
+  },
+  "devDependencies": {
+    "@magic/test": "github:magic/test"
+  },
+  "author": "Wizards & Witches",
+  "license": "AGPL-3.0",
+  "contributors": [
+    {
+      "name": "jascha ehrenreich",
+      "github": "jaeh"
+    },
+    {
+      "name": "philipp tiefenbacher",
+      "github": "wizard23"
+    },
+    {
+      "name": "tom peak",
+      "github": "tompeak"
+    }
+  ]
+}
