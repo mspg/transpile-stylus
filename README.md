@@ -8,7 +8,7 @@ First set up a [mspg](https://github.com/mspg/core) project.
 
 then, in src/config.js
 ```javascript
-  const CSS = require('@mspg/stylus')
+  const CSS = require('@mspg/transpile-stylus')
 
   module.exports = {
     TRANSPILERS: {
