@@ -1,5 +1,5 @@
 {
-  "name": "@mspg/stylus",
+  "name": "@mspg/transpile-stylus",
   "version": "0.0.1",
   "description": "stylus to css transform for mspg",
   "main": "src/index.js",
