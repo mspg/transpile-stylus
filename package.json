@@ -5,7 +5,8 @@
   "main": "src/index.js",
   "scripts": {
     "test": "t",
-    "format": "f -w"
+    "format": "f -w",
+    "calls": "calls"
   },
   "dependencies": {
     "@magic/log": "github:magic/log",
