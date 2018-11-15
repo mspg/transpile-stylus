@@ -53,5 +53,5 @@ module.exports = [
     fn: tryCatch(STYLUS, { config, buffer: 'arglbarf' }),
     expect: is.error,
     info: 'Calling STYLUS with invalid css errors',
-  }
+  },
 ]

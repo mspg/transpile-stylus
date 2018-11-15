@@ -29,7 +29,7 @@ const style = async (string, config) => {
     style.render = util.promisify(style.render)
     const css = await style.render()
     return css
-  } catch(e) {
+  } catch (e) {
     throw e
   }
 }
@@ -60,7 +60,7 @@ const STYLUS = async ({ buffer, config }) => {
     const css = await style(buffer, config)
     const minified = minify(css)
     return minified
-  } catch(e) {
+  } catch (e) {
     throw e
   }
 }
