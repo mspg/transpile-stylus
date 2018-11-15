@@ -6,7 +6,11 @@
   "scripts": {
     "test": "t",
     "format": "f -w",
-    "calls": "calls"
+    "calls": "calls",
+    "build": "NODE_ENV=production mspg build zip",
+    "publish": "NODE_ENV=production mspg build zip publish",
+    "connect": "mspg connect",
+    "dev": "mspg build watch serve"
   },
   "dependencies": {
     "@magic/log": "github:magic/log",
@@ -15,7 +19,8 @@
     "stylus": "0.54.5"
   },
   "devDependencies": {
-    "@magic/test": "github:magic/test"
+    "@magic/test": "github:magic/test",
+    "@mspg/core": "github:mspg/core"
   },
   "author": "Wizards & Witches",
   "license": "AGPL-3.0",
