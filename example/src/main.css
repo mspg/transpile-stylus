@@ -1,0 +1,8 @@
+@import 'nib'
+global-reset()
+
+@import '/test'
+
+body
+  bg-color($black)
+
