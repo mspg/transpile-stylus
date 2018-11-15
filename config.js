@@ -9,4 +9,6 @@ module.exports = {
   CWD: path.join(__dirname, 'example'),
   // and published in example/publish
   OUT_DIR: path.join(__dirname, 'example', 'public'),
+  // web root of the github page
+  WEB_ROOT: 'https://mspg.github.io/transpile-stylus/',
 }
