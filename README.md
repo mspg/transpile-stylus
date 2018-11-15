@@ -13,13 +13,13 @@ First set up a [mspg](https://github.com/mspg/core) project.
 
 then, in src/config.js
 ```javascript
-  const CSS = require('@mspg/transpile-stylus')
+const CSS = require('@mspg/transpile-stylus')
 
-  module.exports = {
-    TRANSPILERS: {
-      CSS,
-    },
-  }
+module.exports = {
+  TRANSPILERS: {
+    CSS,
+  },
+}
 ```
 
 You should not change the extensions of the \*.css files in the /src directory,
