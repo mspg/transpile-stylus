@@ -10,5 +10,7 @@ const minify = style =>
     .replace(/\s{\s+/gim, '{')
     // remove spaces after :
     .replace(/:\s/gim, ':')
+    // remove spaces after ;
+    .replace(/;\s/gim, ';')
 
 module.exports = minify
