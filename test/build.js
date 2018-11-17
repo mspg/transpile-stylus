@@ -50,7 +50,7 @@ module.exports = {
     },
     {
       fn: fileContents,
-      expect: resetCssWorks,
+      expect: importFileWorks,
       info: 'public/main.css contains reset.css',
     },
   ],
