@@ -1,6 +1,5 @@
 const log = require('@magic/log')
 
-const minify = require('./minify')
 const build = require('./build')
 
 const STYLUS = async ({ buffer, config }) => {
@@ -14,8 +13,7 @@ const STYLUS = async ({ buffer, config }) => {
     }
 
     const css = await build(buffer, config)
-    const minified = minify(css)
-    return minified
+    return css
   } catch (e) {
     throw e
   }

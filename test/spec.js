@@ -14,11 +14,16 @@ const cssString = `
 
 const cssBuffer = Buffer.from(cssString, 'utf8')
 
-const expect = `.content #id .class p{color:#008000;}\n/*# sourceMappingURL=stylus.css.map */`
+const expect = `.content #id .class p {\n  color: #008000;\n}\n/*# sourceMappingURL=stylus.css.map */`
 
 const config = {
   CSS_DIR: path.join(__dirname, 'includes'),
   ENV: 'development',
+}
+
+const missingIncludeConfig = {
+  ...config,
+  INCUDE_DIR: __dirname,
 }
 
 module.exports = [
@@ -37,6 +42,11 @@ module.exports = [
     fn: async () => await STYLUS({ buffer: cssBuffer, config }),
     expect: async () => await STYLUS({ buffer: cssString, config }),
     info: 'string and buffer inputs render to the same css string',
+  },
+  {
+    fn: async () => await STYLUS({ buffer: '.c\n  color orange', config: missingIncludeConfig }),
+    expect: '.c {\n  color: #ffa500;\n}\n/*# sourceMappingURL=stylus.css.map */',
+    info: 'missing variables.styl does not error',
   },
 
   {
