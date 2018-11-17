@@ -4,6 +4,7 @@
   "description": "stylus to css transform for mspg",
   "main": "src/index.js",
   "scripts": {
+    "start": "t -p",
     "test": "t",
     "format": "f -w",
     "calls": "calls",
