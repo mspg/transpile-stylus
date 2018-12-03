@@ -3,5 +3,9 @@ global-reset()
 
 @import '/test'
 
-body
-  bg-color($black)
+.green
+  color $green
+
+.mixin-green
+  bg-color($green)
+
