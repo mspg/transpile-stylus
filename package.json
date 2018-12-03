@@ -13,6 +13,9 @@
     "connect": "mspg connect",
     "dev": "mspg build watch serve"
   },
+  "files": [
+    "src/*.js"
+  ],
   "dependencies": {
     "@magic/log": "github:magic/log",
     "autoprefixer-stylus": "0.14.0",
