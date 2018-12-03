@@ -26,9 +26,9 @@ const beforeAll = async () => {
 const exampleFile = path.join(__dirname, '..', 'example', 'public', 'main.css')
 const fileExists = async () => await fs.exists(exampleFile)
 const fileContents = async () => await fs.readFile(exampleFile, 'utf8')
-const variablesFileWorks = s => s.indexOf('body{background-color:#010101;}') > -1
-const resetCssWorks = s => s.indexOf('html,body,div,span,') === 0
-const importFileWorks = s => s.indexOf('div{color:#444;}') > -1
+const variablesFileWorks = s => s.includes('body{line-height:1;color:#000;background:#fff;}')
+const resetCssWorks = s => s.startsWith('html,body,div,span,')
+const importFileWorks = s => s.includes('.green{color:#008000;}')
 
 const zipFile = path.join(__dirname, '..', 'example', 'public', 'main.css.gz')
 const zipFileExists = async () => await fs.exists(zipFile)
