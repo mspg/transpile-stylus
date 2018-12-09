@@ -1,11 +1,10 @@
 #### @mspg/transpile-stylus
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/mspg/transpile-stylus.svg)](https://greenkeeper.io/)
-
 [![NPM version][npm-image]][npm-url]
 [![Linux Build Status][travis-image]][travis-url]
 [![Windows Build Status][appveyor-image]][appveyor-url]
 [![Coverage Status][coveralls-image]][coveralls-url]
+[![Greenkeeper badge](https://badges.greenkeeper.io/mspg/transpile-stylus.svg)](https://greenkeeper.io/)
 
 transpiles stylus to css,
 then uses a very simple css simplifier.
