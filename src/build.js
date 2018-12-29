@@ -9,9 +9,13 @@ const nib = require('nib')
 const autoprefixer = require('autoprefixer-stylus')
 
 // stylus build task
-const build = async (string, config) => {
+const build = async (props) => {
   try {
-    const style = stylus(string)
+    const name = path.basename(props.name)
+    const { config } = props
+
+    const style = stylus(props.buffer)
+      .set('filename', name)
       .set('paths', [config.CSS_DIR])
       .set('sourcemap', {})
       .define('WEB_ROOT', config.ENV !== 'development' && config.WEB_ROOT ? config.WEB_ROOT : '/')
@@ -30,7 +34,10 @@ const build = async (string, config) => {
 
     style.render = util.promisify(style.render)
     const css = await style.render()
-    return css
+    return {
+      buffer: css,
+      sourcemap: style.sourcemap,
+    }
   } catch (e) {
     throw e
   }
