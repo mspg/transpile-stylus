@@ -50,17 +50,17 @@ module.exports = [
   },
 
   {
-    fn: tryCatch(STYLUS, { config }),
+    fn: STYLUS({ config }),
     expect: is.error,
     info: 'Calling STYLUS without a buffer errors',
   },
   {
-    fn: tryCatch(STYLUS),
+    fn: STYLUS(),
     expect: is.error,
     info: 'Calling STYLUS without config errors',
   },
   {
-    fn: tryCatch(STYLUS, { config, buffer: 'arglbarf' }),
+    fn: STYLUS({ config, buffer: 'arglbarf' }),
     expect: is.error,
     info: 'Calling STYLUS with invalid css errors',
   },

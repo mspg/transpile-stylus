@@ -1,8 +1,9 @@
 const build = require('./build')
 
 const STYLUS = async props => {
-  let { buffer } = props
   try {
+    let { buffer } = props
+
     if (buffer && typeof buffer !== 'string' && typeof buffer.toString === 'function') {
       buffer = buffer.toString()
     }
@@ -14,7 +15,7 @@ const STYLUS = async props => {
     const css = await build({ ...props, buffer })
     return css
   } catch (e) {
-    throw e
+    return e
   }
 }
 

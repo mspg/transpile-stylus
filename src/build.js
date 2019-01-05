@@ -39,7 +39,7 @@ const build = async (props) => {
       sourcemap: style.sourcemap,
     }
   } catch (e) {
-    throw e
+    return e
   }
 }
 
