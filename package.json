@@ -22,7 +22,7 @@
     "stylus": "0.54.5"
   },
   "devDependencies": {
-    "@magic/test": "github:magic/test",
+    "@magic/test": "0.1.0-cjs",
     "@mspg/core": "github:mspg/core"
   },
   "author": "Wizards & Witches",
