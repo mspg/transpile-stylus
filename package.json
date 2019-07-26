@@ -17,7 +17,7 @@
     "src/*.js"
   ],
   "dependencies": {
-    "autoprefixer-stylus": "0.14.0",
+    "autoprefixer-stylus": "1.0.0",
     "nib": "1.1.2",
     "stylus": "0.54.5"
   },
