@@ -3,10 +3,15 @@
   "version": "0.0.1",
   "description": "stylus to css transform for mspg",
   "main": "src/index.js",
+  "type": "module",
+  "engines": {
+    "node": ">=14.2.0"
+  },
+  "engineStrict": true,
   "scripts": {
     "start": "t -p",
     "test": "t",
-    "format": "f -w",
+    "format": "f -w -f js json",
     "calls": "calls",
     "build": "NODE_ENV=production mspg build zip",
     "publish": "NODE_ENV=production mspg build zip publish",
@@ -17,13 +22,14 @@
     "src/*.js"
   ],
   "dependencies": {
-    "autoprefixer-stylus": "0.14.0",
-    "nib": "1.1.2",
-    "stylus": "0.54.5"
+    "@magic/fs": "0.0.6",
+    "autoprefixer-stylus": "1.0.0",
+    "stylus": "0.54.8"
   },
   "devDependencies": {
-    "@magic/test": "0.1.0-cjs",
-    "@mspg/core": "github:mspg/core"
+    "@magic/format": "0.0.11",
+    "@magic/test": "0.1.52",
+    "@mspg/core": "github:mspg/core#mjs"
   },
   "author": "Wizards & Witches",
   "license": "AGPL-3.0",
