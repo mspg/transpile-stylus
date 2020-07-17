@@ -13,8 +13,8 @@
     "test": "t",
     "format": "f -w -f js json",
     "calls": "calls",
-    "build": "NODE_ENV=production mspg build zip",
-    "publish": "NODE_ENV=production mspg build zip publish",
+    "build": "NODE_ENV=production mspg build",
+    "publish": "NODE_ENV=production mspg build publish",
     "connect": "mspg connect",
     "dev": "mspg build watch serve"
   },
