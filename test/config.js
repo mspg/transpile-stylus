@@ -1,6 +1,6 @@
-const { is } = require('@magic/test')
-const conf = require('../config')
+import { is } from '@magic/test'
+import conf from '../config.js'
 
-module.exports = [
-  { fn: () => conf.TRANSPILERS.CSS, expect: is.fn, info: 'css transpile is a function' },
+export default [
+  { fn: () => conf.TRANSPILERS.css, expect: is.fn, info: 'css transpile is a function' },
 ]

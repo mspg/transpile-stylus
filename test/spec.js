@@ -1,8 +1,10 @@
-const path = require('path')
+import path from 'path'
 
-const { is, tryCatch } = require('@magic/test')
+import { is } from '@magic/test'
 
-const STYLUS = require('../src/index.js')
+import STYLUS from '../src/index.js'
+
+const __dirname = path.dirname(new URL(import.meta.url).pathname)
 
 const cssString = `
 .content
@@ -14,10 +16,11 @@ const cssString = `
 
 const cssBuffer = Buffer.from(cssString, 'utf8')
 
-const expect = name => `.content #id .class p {\n  color: #008000;\n}\n/*# sourceMappingURL=${name}.css.map */`
+const expect = name =>
+  `.content #id .class p {\n  color: #008000;\n}\n/*# sourceMappingURL=${name}.css.map */`
 
 const config = {
-  CSS_DIR: path.join(__dirname, 'includes'),
+  CSS_DIR: path.join(__dirname, '.includes'),
   ENV: 'development',
 }
 
@@ -26,7 +29,7 @@ const missingIncludeConfig = {
   INCUDE_DIR: __dirname,
 }
 
-module.exports = [
+export default [
   { fn: () => STYLUS, expect: is.fn, info: 'STYLUS is a function' },
   {
     fn: async () => await STYLUS({ name: 'cssString.css', buffer: cssString, config }),
@@ -44,8 +47,10 @@ module.exports = [
     info: 'string and buffer inputs render to the same css string',
   },
   {
-    fn: async () => await STYLUS({ name: 'orange', buffer: '.c\n  color orange', config: missingIncludeConfig }),
-    expect: ({ buffer }) => buffer === '.c {\n  color: #ffa500;\n}\n/*# sourceMappingURL=orange.css.map */',
+    fn: async () =>
+      await STYLUS({ name: 'orange', buffer: '.c\n  color orange', config: missingIncludeConfig }),
+    expect: ({ buffer }) =>
+      buffer === '.c {\n  color: #ffa500;\n}\n/*# sourceMappingURL=orange.css.map */',
     info: 'missing variables.styl does not error',
   },
 
