@@ -22,13 +22,13 @@
     "src/*.js"
   ],
   "dependencies": {
-    "@magic/fs": "0.0.6",
+    "@magic/fs": "0.0.10",
     "autoprefixer-stylus": "1.0.0",
     "stylus": "0.54.8"
   },
   "devDependencies": {
-    "@magic/format": "0.0.11",
-    "@magic/test": "0.1.52",
+    "@magic/format": "0.0.21",
+    "@magic/test": "0.1.60",
     "@mspg/core": "github:mspg/core#mjs"
   },
   "author": "Wizards & Witches",
