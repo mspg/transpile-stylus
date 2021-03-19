@@ -17,12 +17,12 @@
     "src/*.js"
   ],
   "dependencies": {
-    "autoprefixer-stylus": "0.14.0",
+    "autoprefixer-stylus": "1.0.0",
     "nib": "1.1.2",
-    "stylus": "0.54.5"
+    "stylus": "0.54.8"
   },
   "devDependencies": {
-    "@magic/test": "0.1.0-cjs",
+    "@magic/test": "0.1.65",
     "@mspg/core": "github:mspg/core"
   },
   "author": "Wizards & Witches",
