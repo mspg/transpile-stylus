@@ -1,8 +1,8 @@
-const build = require('./build')
+import build from './build.js'
 
-const STYLUS = async props => {
+export const STYLUS = async (props) => {
   try {
-    let { buffer } = props
+    let { buffer, config } = props
 
     if (buffer && typeof buffer !== 'string' && typeof buffer.toString === 'function') {
       buffer = buffer.toString()
@@ -12,11 +12,11 @@ const STYLUS = async props => {
       throw new Error('STYLUS: expect first argument to include { buffer }')
     }
 
-    const css = await build({ ...props, buffer })
+    const css = await build({ ...props, buffer }, config)
     return css
   } catch (e) {
     return e
   }
 }
 
-module.exports = STYLUS
+export default STYLUS

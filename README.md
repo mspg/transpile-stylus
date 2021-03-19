@@ -14,9 +14,9 @@ first set up a [mspg](https://github.com/mspg/core) project.
 
 then, in src/config.js
 ```javascript
-const CSS = require('@mspg/transpile-stylus')
+import CSS from '@mspg/transpile-stylus'
 
-module.exports = {
+export default {
   TRANSPILERS: {
     CSS,
   },

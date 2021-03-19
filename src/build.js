@@ -1,39 +1,36 @@
-const path = require('path')
-const fs = require('fs')
-const util = require('util')
-const exists = util.promisify(fs.exists)
+import path from 'path'
+import fs from '@magic/fs'
+import util from 'util'
 
 // css builders
-const stylus = require('stylus')
-const nib = require('nib')
-const autoprefixer = require('autoprefixer-stylus')
+import stylus from 'stylus'
+import autoprefixer from 'autoprefixer-stylus'
 
 // stylus build task
-const build = async (props) => {
+export const build = async (props, config) => {
   try {
     const name = path.basename(props.name)
-    const { config } = props
 
     const style = stylus(props.buffer)
       .set('filename', name)
       .set('paths', [config.CSS_DIR])
       .set('sourcemap', {})
       .define('WEB_ROOT', config.ENV !== 'development' && config.WEB_ROOT ? config.WEB_ROOT : '/')
-      .use(nib())
       .use(autoprefixer())
 
     const varFile = path.join(config.CSS_DIR, 'variables.styl')
-    if (await exists(varFile)) {
+    if (await fs.exists(varFile)) {
       style.import(varFile)
     }
 
     const mixinFile = path.join(config.CSS_DIR, 'mixins.styl')
-    if (await exists(mixinFile)) {
+    if (await fs.exists(mixinFile)) {
       style.import(mixinFile)
     }
 
     style.render = util.promisify(style.render)
     const css = await style.render()
+    
     return {
       buffer: css,
       sourcemap: style.sourcemap,
@@ -43,4 +40,4 @@ const build = async (props) => {
   }
 }
 
-module.exports = build
+export default build
