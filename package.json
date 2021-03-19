@@ -27,9 +27,9 @@
     "stylus": "0.54.8"
   },
   "devDependencies": {
-    "@magic/format": "0.0.21",
-    "@magic/fs": "0.0.10",
-    "@magic/test": "0.1.60",
+    "@magic/format": "0.0.22",
+    "@magic/fs": "0.0.11",
+    "@magic/test": "0.1.65",
     "@mspg/core": "github:mspg/core"
   },
   "author": "Wizards & Witches",
