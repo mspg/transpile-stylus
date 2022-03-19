@@ -24,12 +24,12 @@
   "dependencies": {
     "autoprefixer-stylus": "1.0.0",
     "nib": "1.1.2",
-    "stylus": "0.54.8"
+    "stylus": "0.56.0"
   },
   "devDependencies": {
-    "@magic/format": "0.0.22",
-    "@magic/fs": "0.0.11",
-    "@magic/test": "0.1.65",
+    "@magic/format": "0.0.38",
+    "@magic/fs": "0.0.22",
+    "@magic/test": "0.2.7",
     "@mspg/core": "github:mspg/core"
   },
   "author": "Wizards & Witches",
