@@ -23,13 +23,13 @@
   ],
   "dependencies": {
     "autoprefixer-stylus": "1.0.0",
-    "nib": "1.1.2",
-    "stylus": "0.56.0"
+    "nib": "1.2.0",
+    "stylus": "0.59.0"
   },
   "devDependencies": {
-    "@magic/format": "0.0.38",
-    "@magic/fs": "0.0.22",
-    "@magic/test": "0.2.7",
+    "@magic/format": "0.0.44",
+    "@magic/fs": "0.0.27",
+    "@magic/test": "0.2.14",
     "@mspg/core": "github:mspg/core"
   },
   "author": "Wizards & Witches",
